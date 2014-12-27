@@ -1,0 +1,33 @@
+use_xft yes
+xftfont xftfont bahamas:size=7.5
+alignment bl
+gap_x 20
+gap_y 26
+xftalpha 0.6
+update_interval 1.0
+maximum_width 500
+minimum_size 500 150
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 10
+#border_margin 4
+border_width 1
+default_shade_color 000000
+default_outline_color 000000
+default_color ffffff
+#
+alpha 0.98
+use_spacer right
+no_buffers yes
+uppercase no
+
+TEXT
+${image ~/.conky/ml2.png -p 40,16}${goto 143}${voffset 97}${kernel}${goto 247}${uptime_short}${goto 294}mem   ${mem}
+${goto 144}${voffset 2}${time %A %d.%m.%Y}${offset 12}cpu ${cpu}${goto 294}${downspeed wlo1} - ${upspeed wlo1}
+

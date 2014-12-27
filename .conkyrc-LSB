@@ -1,0 +1,116 @@
+use_xft yes
+xftfont bahamas:size=7.5
+alignment top_right
+gap_x -200
+gap_y 36
+xftalpha 0.6
+update_interval 1.0
+maximum_width 500
+minimum_size 500 150
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 10
+#border_margin 4
+#border_width 1
+default_shade_color 000000
+default_outline_color 000000
+default_color 000000
+#alpha 0.6
+use_spacer right
+no_buffers yes
+uppercase no
+color0 000000
+color1 1D8813
+color2 3a9fbf
+color3 1D8813
+
+TEXT
+
+
+${goto 165}${color3}${font Zekton:style=bold:size=12}Manjaro
+${voffset -15}${font}${color0}${goto 60}Temperature: 
+${goto 85}${color1}${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color}${font}#{execi 30 sensors | grep 'Core0' | cut -c15-16}°C${color}${font}  
+
+${voffset 55}${goto 10}${font Zekton:style=bold:size=30}${time %H:%M}${font}
+${goto 168}${font Zekton:style=Bold:size=9}CPU1 
+${goto 172}${font Zekton:style=Bold:size=9}${color1}${cpu cpu1}%
+#${font}${color} ${alignr 24}Temperature: ${color1}${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color1}${font}#{execi 30 sensors | grep 'Core0' | cut -c15-16}°C${color}${font}  
+
+
+${color0}${goto 35}HDused:${color0}${goto 128}Red
+${color1}${goto 38}${font Zekton:style=Bold:size=9}${fs_used /home}${goto 120}${downspeed wlo1}${font Zekton:style=Bold:size=9}
+#${color1}{color} ${alignr 24}Temperature: ${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color1}${font}#${execi 30 sensors | grep 'Core1' | cut -c15-16}°C
+${font Zekton:style=Bold:size=9}${font}
+
+${color0}${voffset 10}${goto 85}${font Zekton:style=Bold:size=9}RAM
+${color1}${goto 90}${font Zekton:style=Bold:size=9}${memperc}%
+
+${image ~/.conky/lsd.png -p 10,0 -s 255x412}
+
+
+use_xft yes
+xftfont bahamas:size=7.5
+alignment top_right
+gap_x -200
+gap_y 36
+xftalpha 0.6
+update_interval 1.0
+maximum_width 500
+minimum_size 500 150
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 10
+#border_margin 4
+#border_width 1
+default_shade_color 000000
+default_outline_color 000000
+default_color 000000
+#alpha 0.6
+use_spacer right
+no_buffers yes
+uppercase no
+color0 000000
+color1 1D8813
+color2 3a9fbf
+color3 1D8813
+
+TEXT
+
+
+${goto 165}${color3}${font Zekton:style=bold:size=12}Manjaro
+${voffset -15}${font}${color0}${goto 60}Temperature: 
+${goto 85}${color1}${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color}${font}#{execi 30 sensors | grep 'Core0' | cut -c15-16}°C${color}${font}  
+
+${voffset 55}${goto 10}${font Zekton:style=bold:size=30}${time %H:%M}${font}
+${goto 168}${font Zekton:style=Bold:size=9}CPU1 
+${goto 172}${font Zekton:style=Bold:size=9}${color1}${cpu cpu1}%
+#${font}${color} ${alignr 24}Temperature: ${color1}${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color1}${font}#{execi 30 sensors | grep 'Core0' | cut -c15-16}°C${color}${font}  
+
+
+${color0}${goto 35}HDused:${color0}${goto 128}Red
+${color1}${goto 38}${font Zekton:style=Bold:size=9}${fs_used /home}${goto 120}${downspeed wlo1}${font Zekton:style=Bold:size=9}
+#${color1}{color} ${alignr 24}Temperature: ${font Zekton:style=Bold:size=9}${color1}${acpitemp}°C${color1}${font}#${execi 30 sensors | grep 'Core1' | cut -c15-16}°C
+${font Zekton:style=Bold:size=9}${font}
+
+${color0}${voffset 10}${goto 85}${font Zekton:style=Bold:size=9}RAM
+${color1}${goto 90}${font Zekton:style=Bold:size=9}${memperc}%
+
+${image ~/.conky/lsd.png -p 10,0 -s 255x412}
+
+
